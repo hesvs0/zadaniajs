@@ -1,0 +1,104 @@
+Zadanie 1.1
+Jaka jest różnica pomiędzy walidacją a weryfikacją?
+
+ Walidacja to proces zapewniający, że produkt spełnia oczekiwania i wymagania użytkownika.
+ Weryfikacja to proces zapewniający, że produkt jest zgodny ze standardami jakości.
+
+Zadanie 1.2
+Czy GitHub to jedyna platforma do repozytorium zdalnego? Jeśli uważasz, że nie, 
+wymień inne
+
+Nie wiem żadnej innej platformy, korzystam tylko z GitHuba.
+
+Zadanie 2.2
+Policz łączny wzrost członków Twojej najbliższej rodziny. Utwórz tyle zmiennych, ilu 
+masz najbliższych, przypisz do zmiennych wzrost poszczególnych osób w centymetrach. 
+Na koniec zsumuj wartości przypisane do zmiennych.
+
+const pirwszaOsoba = 165;
+const drugaOsoba = 170;
+const TrzeciaOsoba = 174;
+
+const suma = mam + dad + i;
+
+console.log('Suma ' + suma + ' cm');
+
+Zadanie 2.3
+Zdeklaruj zmienną piosenka i przypisz do niej tekst zwrotki ulubionej piosenki, 
+a następnie wyświetl go za pomocą tej zmiennej w konsoli
+
+const piosenka = "piosenka.........";
+console.log(piosenka);
+
+Zadanie 2.4
+Zdeklaruj kilka zmiennych, przypisz do nich tylko pojedyncze wersy piosenki z poprzedniego zadania, a następnie przy użyciu tych zmiennych wyświetl w konsoli całą piosenke
+
+const piosenka = "piosenka";
+const piosenk = "piosenka";
+const piosen = "piosenka";
+const piose = "piosenka";
+const pios = "piosenka";
+
+console.log(piosenka, piosenk, piosen, piose, pios)
+
+
+Zadanie 2.5
+Napisz aplikację, w której pobierzesz od użytkownika jego imię oraz informację o jego 
+ulubionym kolorze. Następnie wyświetl w konsoli komunikat: „Ulubiony kolor użytkownika (…) to (…)”. W miejscu wielokropków powinny zostać wyświetlone wprowadzone wcześniej dane
+
+const imie = prompt('Podaj imie: ');
+
+const color = prompt("Podaj uliobiony kolor: ");
+
+console.log("Ulubiony kolor użytkownika "+imie+" to "+color)
+
+Zadanie 2.6
+Napisz aplikację, w której użytkownik poda kwotę brutto, a w konsoli zwrócona zostanie kwota netto.
+
+const brutto = parseFloat(prompt("Podaj kwotę brutto: "));
+const stawkaVAT = parseFloat(prompt("Podaj stawke VAT: "));
+
+const netto = brutto / (1 + stawkaVAT / 100);
+
+console.log('Kwota netto wynosi '+netto.toFixed(2)+' zl');
+
+Zadanie 2.7
+Utwórz tablicę z popularnymi markami obuwia i wypisz rozmiar tej tablicy oraz jej 
+przedostatni element
+
+const marki = ['Nike', 'Adidas', 'Puma'];
+
+const rozmiar = marki.length
+
+const element = marki[rozmiar - 2];
+
+console.log("Rozmiar tablicy "+rozmiar);
+console.log("Predostatni element "+ element);
+
+Zadanie 2.8
+Utwórz kolekcję marek laptopów zawierającą więcej niż sześć marek, po czym wypisz 
+elementy drugi i czwarty.
+
+const marki = ['Lenovo', 'Samsung', 'Apple','Xiaomi'];
+
+const rozmiar = marki.length
+
+const element = marki[rozmiar - 3];
+const element2 = marki[rozmiar - 1];
+
+console.log("Rozmiar tablicy "+element);
+console.log("Predostatni element "+ element2);
+
+Zadanie 2.9
+Poproś użytkownika o wpisanie dowolnej liczby parzystej. Jeśli wpisze on liczbę nieparzystą, wyświetl alert z komunikatem: „Wpisana liczba jest nieparzysta”.
+
+const liczba = prompt("Podaj liczbe parzystą: ");
+
+if(liczba % 2){
+    console.log("dobrze")
+}
+else{
+    alert("Wpisana liczba jest nieparzysta")
+}
+
+
