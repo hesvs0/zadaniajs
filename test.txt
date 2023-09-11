@@ -1,0 +1,447 @@
+Zadanie 2.1 
+Utwórz własną listę zakupów zawierającą ceny produktów potrzebnych do ugotowania 
+obiadu. Niech w koszyku zakupowym znajdą się warzywa oraz mięso. Po dodaniu kilku 
+produktów oblicz ich cenę uwzględniającą podatek
+
+var listaZakupow = [
+  { produkt: "Marchewki", cena: 2.50 },
+  { produkt: "Ziemniaki", cena: 3.00 },
+  { produkt: "Kurczak", cena: 12.50 },
+  { produkt: "Brokuły", cena: 4.00 }
+];
+var sumaCen = 0;
+for (var i = 0; i < listaZakupow.length; i++) {
+  sumaCen += listaZakupow[i].cena;
+var podatekProcent = 8; // Możesz zmienić stawkę podatku według potrzeb
+var cenaZPodatkiem = sumaCen * (1 + podatekProcent / 100);
+console.log("Lista zakupów:");
+for (var i = 0; i < listaZakupow.length; i++) {
+  console.log(listaZakupow[i].produkt + ": " + listaZakupow[i].cena.toFixed(2) + " zł");
+}
+console.log("Suma cen: " + sumaCen.toFixed(2) + " zł");
+console.log("Cena z podatkiem (" + podatekProcent + "%): " + cenaZPodatkiem.toFixed(2) + " zł");
+
+Zadanie 2.2
+Policz łączny wzrost członków Twojej najbliższej rodziny. Utwórz tyle zmiennych, ilu 
+masz najbliższych, przypisz do zmiennych wzrost poszczególnych osób w centymetrach. 
+Na koniec zsumuj wartości przypisane do zmiennych.
+
+const pirwszaOsoba = 165;
+const drugaOsoba = 170;
+const TrzeciaOsoba = 174;
+
+const suma = mam + dad + i;
+
+console.log('Suma ' + suma + ' cm');
+
+Zadanie 2.3
+Zdeklaruj zmienną piosenka i przypisz do niej tekst zwrotki ulubionej piosenki, 
+a następnie wyświetl go za pomocą tej zmiennej w konsoli
+
+const piosenka = "piosenka.........";
+console.log(piosenka);
+
+Zadanie 2.4
+Zdeklaruj kilka zmiennych, przypisz do nich tylko pojedyncze wersy piosenki z poprzedniego zadania, a następnie przy użyciu tych zmiennych wyświetl w konsoli całą piosenke
+
+const piosenka = "piosenka";
+const piosenk = "piosenka";
+const piosen = "piosenka";
+const piose = "piosenka";
+const pios = "piosenka";
+
+console.log(piosenka, piosenk, piosen, piose, pios)
+
+
+Zadanie 2.5
+Napisz aplikację, w której pobierzesz od użytkownika jego imię oraz informację o jego 
+ulubionym kolorze. Następnie wyświetl w konsoli komunikat: „Ulubiony kolor użytkownika (…) to (…)”. W miejscu wielokropków powinny zostać wyświetlone wprowadzone wcześniej dane
+
+const imie = prompt('Podaj imie: ');
+
+const color = prompt("Podaj uliobiony kolor: ");
+
+console.log("Ulubiony kolor użytkownika "+imie+" to "+color)
+
+Zadanie 2.6
+Napisz aplikację, w której użytkownik poda kwotę brutto, a w konsoli zwrócona zostanie kwota netto.
+
+const brutto = parseFloat(prompt("Podaj kwotę brutto: "));
+const stawkaVAT = parseFloat(prompt("Podaj stawke VAT: "));
+
+const netto = brutto / (1 + stawkaVAT / 100);
+
+console.log('Kwota netto wynosi '+netto.toFixed(2)+' zl');
+
+Zadanie 2.7
+Utwórz tablicę z popularnymi markami obuwia i wypisz rozmiar tej tablicy oraz jej 
+przedostatni element
+
+const marki = ['Nike', 'Adidas', 'Puma'];
+
+const rozmiar = marki.length
+
+const element = marki[rozmiar - 2];
+
+console.log("Rozmiar tablicy "+rozmiar);
+console.log("Predostatni element "+ element);
+
+Zadanie 2.8
+Utwórz kolekcję marek laptopów zawierającą więcej niż sześć marek, po czym wypisz 
+elementy drugi i czwarty.
+
+const marki = ['Lenovo', 'Samsung', 'Apple','Xiaomi'];
+
+const rozmiar = marki.length
+
+const element = marki[rozmiar - 3];
+const element2 = marki[rozmiar - 1];
+
+console.log("Rozmiar tablicy "+element);
+console.log("Predostatni element "+ element2);
+
+Zadanie 2.9
+Poproś użytkownika o wpisanie dowolnej liczby parzystej. Jeśli wpisze on liczbę nieparzystą, wyświetl alert z komunikatem: „Wpisana liczba jest nieparzysta”.
+
+const liczba = prompt("Podaj liczbe parzystą: ");
+
+if(liczba % 2){
+    console.log("dobrze")
+}
+else{
+    alert("Wpisana liczba jest nieparzysta")
+}
+
+Zadanie 2.10
+Użytkownik proszony jest o wskazanie numeru budynku na ulicy Kolskiej. Z bazy 
+pocztowej wiemy, że na ulicy Kolskiej znajdują się budynki wyłącznie z numerami 
+pomiędzy 10 a 15. Aplikacja powinna wyświetlić alert w przypadku podania numeru 
+budynku spoza tego zakresu.
+
+var numerBudynku = prompt("Podaj numer budynku na ulicy Kolskiej:");
+numerBudynku = parseInt(numerBudynku);
+if (numerBudynku >= 10 && numerBudynku <= 15) {
+} else {
+  alert("Numer budynku jest poza zakresem od 10 do 15 na ulicy Kolskiej.");
+}
+
+Zadanie 2.11
+Utwórz tablicę zawierającą nazwy produktów. Użytkownik powinien móc wpisać numer 
+i uzyskać informację o produkcie zapisanym w tablicy pod indeksem odpowiadającym 
+wpisanemu numerowi. Jeśli poda numer wykraczający poza zakres tablicy, to powinien 
+zostać wyświetlony odpowiedni komunikat.
+let produkty = [
+    "nabial",
+    "telewizor",
+    "smartfon",
+    "kamera",
+    "laptop"
+    ];
+    
+    let numer = prompt("podaj numer produktu (0-4): ");
+    
+    numer = parseInt(numer);
+    
+    if(!isNaN(numer) && numer >= 0 && numer < produkty.length) {
+        console.log ("Produkt o numerze "+numer+" to "+produkty[numer]);
+    }else{
+        console.log("Niprawidlowy numer produktu");
+    }
+
+    Zadanie 2.12
+Wszyscy znamy kolejność planet w Układzie Słonecznym. Napisz aplikację, która po 
+wpisaniu przez użytkownika numeru planety wyświetli jej nazwę. Jeśli użytkownik 
+wpisze liczbę większą niż 8, powinien wyświetlić się alert z informacją, że Układ Słoneczny ma tylko 8 planet.
+
+let planety = [
+    "Merkury",
+    "Wenus",
+    "Ziemia",
+    "Mars",
+    "Jowisz",
+    "Saturn",
+    "Uran",
+    "Neptun"
+    ];
+    
+    
+    let numerPlanety = prompt("Podaj numer plantry (1-8): ");
+    
+    numerPlanety = parseInt(numerPlanety);
+    
+    if(!isNaN(numerPlanety) && numerPlanety >= 1 && numerPlanety <= 8){
+        let nazwaPlanety = planety[numerPlanety - 1];
+        alert('Planeta o numerze '+numerPlanety+" to: "+nazwaPlanety);
+    }else{
+        alert("Nieprawidlowy numer planety");
+    }
+
+    Zadanie 2.13
+W ogrodzie botanicznym jest cennik biletów:
+ normalny — 3 zł
+ ulgowy — 1,5 zł
+Napisz aplikację, w której użytkownik podaje liczbę biletów normalnych oraz ulgowych, 
+po czym uzyskuje informację o kwocie do zapłaty
+
+let biletNormalny = prompt("Podaj ilosz biletow normalnych: ");
+let biletUlgowy = prompt("Podaj ilosz biletow ulgowych: ");
+
+let bilety = (biletNormalny * 3) + (biletUlgowy * 1.5);
+
+console.log("Cena biletów będzie: "+bilety);
+
+Zadanie 2.14
+Załóżmy, że dzień rozpoczyna się wschodem słońca o 6, a kończy zachodem o 21. Napisz 
+aplikację, która po wpisaniu przez użytkownika pełnej godziny wyświetli informację 
+o porze dnia. Przyjmijmy, że ranek trwa do 11, godzina 12 to południe, od 13 do 18 
+mamy popołudnie, od 18 do 21 wieczór, a między godzinami 21 i 6 noc.
+
+let godzina = prompt("Podaj godzine od 0 do 24: ");
+
+
+if(godzina >= 6 && godzina <= 11){
+    console.log("Teraz jest ranek");
+}
+else if(godzina == 12){
+    console.log("Teraz jest południe");
+}
+else if(godzina >= 13 && godzina <= 18){
+    console.log("Teraz jest popołidnie");
+}
+else if(godzina >= 19 && godzina <= 21){
+    console.log("Teraz jest wieczór");
+}
+else {
+    console.log("Teraz jest noc");
+}
+
+Zadanie 2.15
+Stwórz prostą aplikację pogodową, która, w zależności od wyświetlonych poniżej warunków, będzie wyświetlała odpowiadające im komunikaty:
+q Warunek: „Jest słonecznie i pochmurnie”; komunikat: „Idę pobiegać”.
+q Warunek: „Jest słonecznie i powyżej 25 stopni”; komunikat: „Idę się opalać”.
+q Warunek: „Pada”; komunikat: „Zostaję w domu i czytam książkę”.
+
+let warunekPogodowy = prompt("Podaj warunek pogodowy: ");
+
+
+if(warunekPogodowy.includes("pochmurnie")){
+    alert("Idę pobiegać");
+}
+else if(warunekPogodowy.includes("słonecznie") &&  warunekPogodowy.includes("powyżej 25 stopni")){
+    alert("Idę się opalać");
+}
+else if(warunekPogodowy.includes("pada")){
+    alert("Zostaję w domu i czytam książkę");
+}
+else{
+    alert("Nie mam pomysły co robić");
+}
+
+Zadanie 2.16
+Napisz aplikację typu quiz. Opracuj trzy pytania i odpowiedzi na nie. Pytania powinny 
+wyświetlać się kolejno użytkownikowi, a on powinien wprowadzać odpowiedzi. Na 
+końcu, zależnie od liczby trafień, powinien otrzymać informację o uzyskanej randze:
+q Czarnoksiężnik — gdy odpowiedział na wszystkie pytania;
+q Mistrz — gdy odpowiedział na dwa pytania;
+q Adept — gdy odpowiedział na jedno pytanie
+
+
+
+let pytania = [
+    "Pytanie 1:Jakie jest stolice Francji",
+    "Pytanie 2:Która planeta jest najbliżej Słońca?",
+    "Pytanie 3:Kto napisał dramat 'Romeo i Julia'?"
+];
+
+let odpowedzi = [
+    "Paryż",
+    "Merkury",
+    "William Shakespeare"
+];
+
+let trafioneOdpowedzi = 0;
+
+
+for(let i = 0; i < pytania.length; i++){
+    let odpowiedz = prompt(pytania[i]);
+    
+    if (odpowiedz && odpowiedz.toLowerCase() === odpowedzi[i].toLowerCase()){
+        trafioneOdpowedzi++;
+    }
+}
+
+let ranga;
+
+if(trafioneOdpowedzi === 3){
+    ranga = "Czarodziej";
+}
+else if(trafioneOdpowedzi === 2){
+    ranga = "Mistrz";
+}
+else if(trafioneOdpowedzi === 1){
+    ranga = "Adept";
+}
+else{
+    ranga = "0";
+}
+console.log('Liczba trafionych odpowiedzi: '+trafioneOdpowedzi);
+console.log('Liczba ranga to: '+ranga);
+
+
+
+
+Zadanie 2.17
+W sklepie zoologicznym sprzedawca potrzebuje programu, który poda klientowi, ile 
+karmy należy odmierzyć dla kota na podstawie jego wagi, zgodnie z przelicznikiem 
+podanym na opakowaniu.
+cat (kg) 1 2 3 4 5 6
+daily amount (g) 20 31 41 50 58 66
+Napisz taki kalkulator, który obliczy potrzebną ilość karmy oraz wyświetli odpowiednią 
+informację w konsoli.
+
+let przelicznikKarmy = {
+    1: 20,
+    2: 31,
+    3: 41,
+    4: 50,
+    5: 58,
+    6: 66
+};
+
+let wagaKota = prompt("Podaj wagę kota: ");
+ 
+wagaKota = parseFloat(wagaKota);
+
+if (!isNaN(wagaKota) && wagaKota >= 1 && wagaKota <= 7){
+    let iloscKarmy = przelicznikKarmy[wagaKota];
+    console.log("Kot o wadze "+wagaKota+" kg potrzebuje "+iloscKarmy+" g karmy dziennie");
+}
+
+Zadanie 2.18
+Napisz kalkulator do obliczenia, czy z góry znane wagi kilku elementów nie przekraczają 
+wskazanej przez użytkownika ładowności ciężarówki
+
+const ladownoscCiezarowki = prompt("Podaj ładownosc ciężarówki: ");
+const liczbaElementow = prompt("Podaj liczbę elementów: ");
+let sumaWag = 0;
+
+for (let i = 1; i <= liczbaElementow; i++){
+    const wagaElementu = prompt('Podaj wagę elementu'+i+': ');
+    
+        sumaWag += wagaElementu;
+}
+if(sumaWag <= ladownoscCiezarowki){
+    console.log ("Nie przekracza");
+}
+else{
+    console.log("Przekracza");
+}
+
+
+Zadanie 2.19
+Stwórz quiz (podobny do tego z zadania 2.16) przy użyciu tablicy dwuwymiarowej. 
+Quiz ma zawierać 10 pytań z odpowiedziami. Po udzieleniu odpowiedzi użytkownik 
+powinien uzyskać informację rankingową:
+
+ 0 – 4 poprawnych odpowiedzi — Spróbuj jeszcze raz;
+ 5 – 8 poprawnych odpowiedzi — Całkiem nieźle;
+ 8 – 10 poprawnych odpowiedzi — Jesteś mistrzem!
+
+let quiz = [
+    ["Pytanie 1: Jakie jest stolice Francji","Paryż"],
+    ["Pytanie 2: Która planeta jest najbliżej Słońca?","Merkury"],
+    ["Pytanie 3: Kto napisał dramat 'Romeo i Julia'?","William Shakespeare"],
+    ["Pytanie 4: Jak nazywa się najwyższa góra na Ziemi","Mount Everest"],
+    ["Pytanie 5: Ile wynosi 7 razy 8","56"],
+    ["Pytanie 6: Który pierwiastek chemiczny ma symbol 'H'","Wodór"],
+    ["Pytanie 7: Kto był pierwszym prezydentem Stanów Zjednoczonych","George Washington"],
+    ["Pytanie 8: W ktorym roky odbyła się pierwsza podróz człowieka na Księżyc?","1969"],
+    ["Pytanie 9: Który kolor znajduje się na górze tęczy?","Czerwony"],
+    ["Pytanie 10: Jak nazuwa się największa wyspa na świecie","Grenladia"],
+    
+];
+
+
+
+let trafioneOdpowedzi = 0;
+
+
+for(let i = 0; i < quiz.length; i++){
+    let pytanie = quiz[i][0];
+    let poprawnaOdpowiedz = quiz[i][1];
+    
+    let odpowiedz = prompt(pytanie);
+    
+    if (odpowiedz && odpowiedz.toLowerCase() === poprawnaOdpowiedz.toLowerCase()){
+        trafioneOdpowedzi++;
+    }
+}
+
+let ranga;
+
+if(trafioneOdpowedzi >= 8){
+    ranga = "Jesteś mistrzem";
+}
+else if(trafioneOdpowedzi >= 5){
+    ranga = "Całkiem nieżle";
+}
+else{
+    ranga = "Sprobuj jeszcze raz";
+}
+console.log('Liczba trafionych odpowiedzi: '+trafioneOdpowedzi);
+console.log('Liczba ranga to: '+ranga);
+
+Zadanie 2.20
+Utwórz tablicę zawierającą pięć wybranych stolic europejskich. Używając pętli for … 
+of, wypisz wszystkie stolice zawarte w tablicy
+
+let stoliceEuropejskie = ["Paryż","Rzym","Berlin"];
+
+for (let stolica of stoliceEuropejskie){
+    console.log(stolica);
+}
+
+
+
+Zadanie 2.21
+
+Użyj pętli for do zsumowania co trzeciego elementu tablicy liczby = [1, 2, 3, 
+4, 5, 6, 7, 8, 9, 10].
+
+let liczby = [1,2,3,4,5,6,7,8,9,10];
+
+let suma = 0;
+
+for(let i = 2; i < liczby.length; i +=3){
+    suma += liczby[i];
+}
+console.log("Suma co trzeciego elementu: "+ suma);
+
+
+Zadanie 2.22
+Stwórz aplikację, która pozwoli uzupełnić dane klienta (znamy już imię i nazwisko) 
+o wiek i płeć
+
+
+let imie = prompt("Podaj imie klienta: ");
+let nazwisko = prompt("Podaj nazwisko klienta: ");
+let wiek = prompt("Podaj wiek klienta: ");
+let plec = prompt("Podaj plec klienta: ");
+
+console.log("Dane klienta");
+console.log("Imie klienta: "+imie);
+console.log("Nazwisko klienta: "+nazwisko);
+console.log("Wiek klienta: "+wiek);
+console.log("Plec klienta: "+plec);
+
+
+
+
+
+
+
+
+
+
+
+
