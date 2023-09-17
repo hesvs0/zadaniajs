@@ -1,0 +1,114 @@
+public class QuickSort {
+
+    public static void quicksort(int[] arr, int left, int right) {
+        if (left < right) {
+            int pivotIndex = partition(arr, left, right);
+            quicksort(arr, left, pivotIndex - 1);
+            quicksort(arr, pivotIndex + 1, right);
+        }
+    }
+
+    public static int partition(int[] arr, int left, int right) {
+        int pivotValue = arr[right];
+        int storeIndex = left - 1;
+        
+        for (int i = left; i < right; i++) {
+            if (arr[i] < pivotValue) {
+                storeIndex++;
+                int temp = arr[storeIndex];
+                arr[storeIndex] = arr[i];
+                arr[i] = temp;
+            }
+        }
+
+        int temp = arr[storeIndex + 1];
+        arr[storeIndex + 1] = arr[right];
+        arr[right] = temp;
+
+        return storeIndex + 1;
+    }
+
+    public static void main(String[] args) {
+        int[] inputArray = {4, 7, 5, 10, 8, 3, 6};
+        quicksort(inputArray, 0, inputArray.length - 1);
+
+        System.out.println("Posortowana tablica:");
+        for (int num : inputArray) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class BubbleSort {
+    public static void main(String[] args) {
+        int[] arr = {64, 25, 12, 22, 11};
+        bubbleSort(arr);
+        System.out.println("Posortowana lista:");
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+
+    public static void bubbleSort(int[] arr) {
+        int n = arr.length;
+        boolean swapped;
+
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+            if (!swapped) {
+                break;
+            }
+        }
+    }
+}
+
+
+
+public class ROT13 {
+    public static String szyfruj(String tekst) {
+        StringBuilder zaszyfrowany = new StringBuilder();
+
+        for (char znak : tekst.toCharArray()) {
+            if (Character.isLetter(znak)) {
+                char start = Character.isLowerCase(znak) ? 'a' : 'A';
+                zaszyfrowany.append((char) (start + (znak - start + 13) % 26));
+            } else {
+                zaszyfrowany.append(znak);
+            }
+        }
+
+        return zaszyfrowany.toString();
+    }
+
+    public static void main(String[] args) {
+        String tekstDoZaszyfrowania = "Hello, World!";
+        String zaszyfrowanyTekst = szyfruj(tekstDoZaszyfrowania);
+
+        System.out.println("Tekst do zaszyfrowania: " + tekstDoZaszyfrowania);
+        System.out.println("Zaszyfrowany tekst: " + zaszyfrowanyTekst);
+    }
+}
