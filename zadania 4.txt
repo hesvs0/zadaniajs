@@ -1,0 +1,210 @@
+Zadanie 4.1
+Część I (10 min)
+Wyobraź sobie, że przydzielono Cię do nowego projektu. Twoim zadaniem będzie 
+przetestowanie nowej poczty elektronicznej. Wypisz podstawowe funkcjonalności, 
+które Twoim zdaniem muszą zostać sprawdzone.
+
+1. Rejestracja i Logowanie:
+
+Sprawdzenie, czy proces rejestracji działa prawidłowo.
+Upewnienie się, że użytkownicy mogą się zalogować bez problemów.
+
+2.Interfejs użytkownika:
+
+Ocena czy interfejs jest przejrzysty, intuicyjny i estetyczny.
+Upewnienie się, że wszystkie funkcje są łatwo dostępne.
+
+3.Skrzynka odbiorcza:
+
+Sprawdzenie, czy wiadomości przychodzące są wyświetlane poprawnie.
+Upewnienie się, że można odczytywać i otwierać wiadomości.
+Testowanie sortowania i filtrowania wiadomości.
+
+4.Wysyłanie wiadomości:
+
+Upewnienie się, że użytkownicy mogą pisać i wysyłać wiadomości.
+Testowanie opcji załączania plików i obrazów.
+Sprawdzenie, czy obsługiwane są różne formaty wiadomości (tekst, HTML, itp.).
+
+5.Filtrowanie i Sortowanie:
+
+Testowanie opcji filtrowania i sortowania wiadomości.
+Sprawdzenie czy można tworzyć niestandardowe filtry.
+
+6.Powiadomienia:
+
+Sprawdzenie, czy użytkownicy otrzymują powiadomienia o nowych wiadomościach.
+Testowanie ustawień powiadomień.
+
+
+Część II (5 min)
+Poinformowano Cię, że ze względu na przedłużający się czas wytwarzania oprogramowania,
+ aby nie przekroczyć terminu oddania aplikacji klientowi, harmonogram 
+testów zostanie znacznie skrócony. Zmusza Cię to do wybrania tylko trzech kluczowych 
+funkcjonalności, które będą testowane. Wskaż trzy wybrane funkcjonalności programu 
+pocztowego.
+
+Skrzynka odbiorcza:
+
+Jest to jedna z najważniejszych części poczty elektronicznej, więc należy przetestować,
+ czy użytkownicy mogą poprawnie odbierać i odczytywać wiadomości.
+Upewnienie się, że wiadomości są wyświetlane zgodnie z oczekiwaniami, 
+a także że są dostępne różne opcje sortowania i filtrowania.
+
+
+Wysyłanie wiadomości:
+
+Kolejna kluczowa funkcjonalność to możliwość pisania i wysyłania wiadomości.
+Warto sprawdzić, czy użytkownicy mogą dodawać załączniki,
+czy formatowanie tekstu działa poprawnie,
+i czy wiadomości są wysyłane bez problemów.
+
+Bezpieczeństwo i Zabezpieczenia:
+
+Skoncentruj się na testach bezpieczeństwa, w tym na sprawdzaniu, 
+czy aplikacja jest odporna na ataki typu XSS, CSRF i inne zagrożenia.
+Upewnienie się, że dane użytkowników są odpowiednio chronione i że mechanizmy uwierzytelniania działają poprawnie.
+
+
+Zadanie 4.2
+Wymień siedem zasad testowania i omów dwie z nich bardziej szczegółowo.
+
+1.Testowanie pokrywa wszystkie przypadki
+2.Testowanie wczesne
+3.Testowanie przez niezależnych testerów
+4.Planowanie i zarządzanie testowaniem
+5.Dokładne dokumentowanie
+6.Kontrola jakości
+7.Testowanie kontynuacyjne
+
+Testowanie pokrywa wszystkie przypadki:
+
+Ta zasada podkreśla znaczenie kompleksowego pokrycia wszystkich możliwych przypadków testowych.
+Oznacza to, że nie tylko podstawowe scenariusze, ale także warunki graniczne, 
+błędy i ewentualności powinny być brane pod uwagę podczas tworzenia testów.
+Dzięki temu można wykryć błędy, które mogą się pojawić w rzeczywistych sytuacjach użytkowania oprogramowania.
+
+
+Testowanie wczesne:
+
+Zasada testowania wczesnego podkreśla znaczenie rozpoczęcia testowania jak
+najwcześniej w procesie rozwoju oprogramowania. Jest to kluczowe, ponieważ wczesne
+wykrycie i naprawa błędów jest znacznie tańsze i mniej czasochłonne niż naprawa
+ich na późniejszym etapie projektu. Testowanie wczesne pomaga zmniejszyć ryzyko opóźnień
+projektu i zapewnia, że problemy są rozwiązywane na bieżąco, zanim zostaną zintegrowane
+z innymi częściami systemu. To podejście pozwala także na zwiększenie zaufania klientów do jakości produktu.
+
+
+
+
+
+Zadanie 4.3
+Wymień grupy czynności, z których składa się proces testowy.
+
+1.Planowanie testów
+2.Projektowanie testów
+3.Wykonanie testów
+4.Raportowanie błędów
+5.Analiza wyników
+6.Re-testowanie i regresja
+7.Zarządzanie konfiguracją i środowiskiem
+
+Zadanie 4.4 
+Z czego składa się plan testów?
+
+1.Cel testów
+2.Zakres testów
+3.Strategia testów
+4.Harmonogram testów
+5.Zasoby testowe
+6.Kryteria sukcesu
+7.Plan zarządzania konfiguracją
+8.Raportowanie
+
+Zadanie 4.5
+Z czego składa się przypadek testowy?
+
+1.Tytuł przypisu testowego
+2.Identyfikator przypisu testowego
+3.Opis przypisu testowego
+4.Warunki wstępne
+5.Kroki testowe
+6.Dane testowe
+7.Autor i data utworzenia
+
+
+Zadanie 4.6
+Wskaż różnice pomiędzy testami funkcjonalnymi a niefunkcjonalnymi.
+Podsumowując, główną różnicą między testami funkcjonalnymi a niefunkcjonalnymi jest to,
+ że testy funkcjonalne skupiają się na funkcjonalnościach i zachowaniach oprogramowania,
+ podczas gdy testy niefunkcjonalne oceniają cechy oprogramowania, które wpływają na jakość i wydajność,
+ ale nie są bezpośrednio związane z jego funkcjami
+
+
+Zadanie 4.7
+Jakie są podstawowe cele testów akceptacyjnych?
+
+1.Potwierdzenie zgodności z wymaganiami
+2.Ocena użyteczności i używalności
+3.Ocena zgodności z oczekiwaniami użytkowników
+4.Identyfikacja błędów i problemów
+5.Zabezpieczenie przed ryzykiem wdrożenia
+6.Potwierdzenie gotowości do produkcji
+7.Zwiększenie zaufania użytkowników
+
+Celem testów akceptacyjnych jest zapewnienie, że oprogramowanie jest gotowe do użytku przez
+końcowych użytkowników i spełnia ich oczekiwania oraz wymagania biznesowe. 
+
+
+Zadanie 4.8
+Podaj różnicę pomiędzy testami regresji a re-testem.
+
+Cel testów regresji:
+
+Celem testów regresji jest sprawdzenie, czy wprowadzone zmiany w kodzie lub nowe funkcje nie wpłynęły
+negatywnie na już istniejącą funkcjonalność oprogramowania. Chodzi o upewnienie się, że istniejące funkcje
+nadal działają zgodnie z oczekiwaniami po każdej modyfikacji.
+
+Cel re-testów:
+
+Celem re-testów jest weryfikacja, czy konkretne błędy, które zostały wcześniej wykryte i zgłoszone,
+zostały naprawione poprawnie. Re-testy skupiają się na konkretnych błędach lub incydentach.
+
+
+Zadanie 4.9
+Jaka jest różnica pomiędzy testami czarnoskrzynkowymi a białoskrzynkowymi?
+główną różnicą między testami czarnoskrzynkowymi a białoskrzynkowymi jest poziom dostępu
+do wewnętrznych struktur aplikacji. Testy czarnoskrzynkowe skupiają się na zachowaniu 
+i funkcjonalności z perspektywy użytkownika, podczas gdy testy białoskrzynkowe analizują i testują kod źródłowy aplikacji.
+
+Zadanie 4.10
+Czym różnią się testy przeciążeniowe od testów obciążeniowych? 
+
+Główną różnicą między testami przeciążeniowymi a testami obciążeniowymi jest cel i zakres.
+Testy przeciążeniowe badają zachowanie oprogramowania w ekstremalnych warunkach,
+podczas gdy testy obciążeniowe oceniają wydajność w normalnych warunkach użytkowania. 
+
+Zadanie 4.11
+Podaj definicję defektu.
+Defekt, w kontekście testowania oprogramowania, to niezgodność lub odchylenie od oczekiwanego 
+zachowania lub wymagań, które zostaje zidentyfikowane podczas procesu testowego.
+ Defekt jest rodzajem błędu w oprogramowaniu, który może prowadzić do nieprawidłowego
+ działania systemu lub niezgodności z ustalonymi specyfikacjami
+
+Zadanie 4.12
+Jakie informacje powinno zawierać poprawne zgłoszenie błędu?
+1.Tytuł lub krótka nazwa błędu
+2.Opis błędu
+3.Kroki do odtworzenia
+4.Środowisko testowe
+5.Dane wejściowe
+6.Oczekiwane zachowanie
+7.Aktualne zachowanie
+8.Priorytet i ważność
+9.Zrzuty ekranu lub pliki logów
+10.Informacje kontaktowe
+11.Data zgłoszenia
+12.Status zgłoszenia
+
+
+

@@ -1,0 +1,54 @@
+Zadanie 3.6
+Napisz aplikację wyszukującą wskazany element w tablicy.
+
+const tablica = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const szukanyElement = 5;
+
+function znajdzElement(tablica, element) {
+  for (let i = 0; i < tablica.length; i++) {
+    if (tablica[i] === element) {
+      return `Element ${element} został znaleziony na pozycji ${i}.`;
+    }
+  }
+  return `Element ${element} nie został znaleziony w tablicy.`;
+}
+
+const wynik = znajdzElement(tablica, szukanyElement);
+console.log(wynik);
+
+
+
+Zadanie 3.10
+Zaimplementuj (na podstawie samodzielnie stworzonego schematu blokowego) metodę 
+sprawdzającą, czy wskazana przez użytkownika liczba jest liczbą pierwszą. Jaka jest 
+złożoność obliczeniowa tego algorytmu
+
+function czyLiczbaPierwsza(liczba) {
+  if (liczba <= 1) {
+    return false;
+  }
+  
+  if (liczba <= 3) {
+    return true; // 
+  }
+  
+  if (liczba % 2 === 0 || liczba % 3 === 0) {
+    return false; 
+  }
+  
+  for (let i = 5; i * i <= liczba; i += 6) {
+    if (liczba % i === 0 || liczba % (i + 2) === 0) {
+      return false;
+    }
+  }
+  
+  return true;
+}
+
+const liczba = 17;
+if (czyLiczbaPierwsza(liczba)) {
+  console.log(`${liczba} jest liczbą pierwszą.`);
+} else {
+  console.log(`${liczba} nie jest liczbą pierwszą.`);
+}
