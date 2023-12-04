@@ -1,0 +1,79 @@
+Zadanie 7.1
+Wypisz kolejne uwagi do kodu dotyczącego planet.
+
+Nazewnictwo: Nazwa funkcji draw nie jest zbyt opisowa. Warto nadać funkcji nazwę, która dokładnie opisuje jej działanie,
+ na przykład getPlanetNumber.
+
+Obsługa błędów: Funkcja nie zawiera obsługi przypadku, gdy podane zostanie coś innego niż nazwa planety.
+Może być przydatne dodanie obsługi błędów, np. zwrócenie wartości domyślnej lub informacji o błędzie, jeśli podana 
+zostanie niepoprawna nazwa planety.
+
+Struktura kodu: Używanie wielu instrukcji if else sprawia, że kod staje się mniej czytelny. Można rozważyć
+ inne podejście, np. użycie obiektu lub mapy do mapowania nazw planet na ich odpowiednie numery.
+
+
+Zadanie 7.2
+Wypisz cel sprintu 4. oraz zadania dla poszczególnych ról.
+
+Scrum Master:
+
+Ułatwianie spotkań i wydarzeń Scrumowych.
+Pomoc zespołowi w eliminacji przeszkód.
+Wspieranie zespołu w przestrzeganiu zasad i wartości Scruma.
+Product Owner:
+
+Tworzenie i priorytetyzacja backlogu produktu.
+Komunikacja z zespołem w celu zapewnienia zrozumienia wymagań biznesowych.
+Ustalanie priorytetów funkcji lub zadań do realizacji.
+Zespół Deweloperski:
+
+Realizacja zadań z backlogu sprintu.
+Codzienne prace programistyczne w celu osiągnięcia celów sprintu.
+Współpraca i komunikacja w zespole w celu osiągnięcia założonych celów.
+
+Zadanie 7.4
+Na podstawie informacji z rozdziału utwórz aplikację labiryntu
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Labirynt</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="labiryntCanvas" width="400" height="400"></canvas>
+    <script src="labirynt.js"></script>
+</body>
+</html>
+
+const canvas = document.getElementById('labiryntCanvas');
+const ctx = canvas.getContext('2d');
+
+const labirynt = [
+    [1, 1, 1, 1, 1],
+    [1, 0, 0, 0, 1],
+    [1, 1, 1, 0, 1],
+    [1, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1],
+];
+
+const tileSize = 40; // Rozmiar jednego pola w pikselach
+
+function rysujLabirynt() {
+    for (let y = 0; y < labirynt.length; y++) {
+        for (let x = 0; x < labirynt[y].length; x++) {
+            if (labirynt[y][x] === 1) {
+                ctx.fillStyle = 'black';
+            } else {
+                ctx.fillStyle = 'white';
+            }
+            ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
+        }
+    }
+}
+
+rysujLabirynt();
